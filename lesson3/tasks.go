@@ -16,7 +16,7 @@ func longestPrefix(words []string) string {
 
 	shortest := &words[0]
 	for _, word := range words[1:] {
-		if len(word) > len(*shortest) {
+		if len(word) < len(*shortest) {
 			shortest = &word
 		}
 	}
